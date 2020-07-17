@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+.jumbotron {
+  background-color: #f4511e; /* Orange */
+  color: #ffffff;
+  padding:25px 20px;
+}
+
+ </style>
+<body>
+<div class="jumbotron text-center">
+<center>
+  <h1>FACTS</h1>
+  <img src="static\product1.png" class="img-rounded" alt="product" width="300" height="230" align="middle">
+  <br><br>
+  <form action="http://127.0.0.1:5000/success" method="post">
+    <div class="form-group">
+      <input type="text" class="form-control" name="nm"  placeholder="Product ID" style="width:360px" required>
+      <br>
+      <div class="input-group-btn">
+	    
+      <button type="submit"  value="Send" class="btn btn-success" id="submit">Submit</button>
+	   
+      </div>
+    </div>
+  </form>
+<!---<form action="http://127.0.0.1:5000/success" method="POST">
+<input type="text" name="nm" placeholder="Product ID" required/>
+	    
+      <input type="submit" value="Submit"/>
+	   
+</form>--->
+</center>
+</div>
+<style>
+.container-fluid {
+
+background-color:white;
+}
+.input
+{
+
+width:100%;
+}
+.button
+{
+font-size:16px;
+}
+.col-sm-4{
+padding:5px 10px;
+padding-right:250px;
+
+}
+
+.col-sm-8{
+padding-left:250px;
+padding-bottom:200px;
+color:#f4511e;
+}
+</style>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-8">
+  <h2><b>Our Values</b></h2>
+  <h4><strong>MISSION : </strong><b>Say bye to fake reviews</b></h4>
+  <h4><strong>VISION : </strong><b>Get good product</b></h4>
+    </div>
+	<div class="col-sm-4">
+      <img src="static\product.jpg"  class="img-rounded" alt="product1" width="200" height="100">
+    </div>
+</div>
+</div>
+</body>
+</html>
