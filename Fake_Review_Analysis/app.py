@@ -14,18 +14,18 @@ def session():
 @app.route('/success',methods=['POST'])
 def success():
 	if request.method == 'POST':
-		user = request.form['nm']
+		pid = request.form['nm']
 		print(user)
-		rslt,dict1=promte(user)
-		dict2=IP_address(user)
+		rslt,fake1=promte(pid)
+		fake2=IP_address(pid)
 		lst=[]
-		print(dict1)
-		for key,value in dict1.items():
-			a=rslt[rslt['review_id']==key]
-			if value!=0 and dict2[key]!=0:
-				b=a['review_body'].tolist()
-				lst.append(b)
-				print(lst)
+		for i in range(len(rslt)):
+			if fake1[i]==0 and fake2[i]==0:
+				lst.append(rslt['reviewbody'])
+			else if fake1[i]==0:
+				lst.append(rslt['reviewbody'])
+			else if fake2[i]==0:
+				lst.append(rslt['reviewbody'])
 		return render_template('spage.html',lst=lst,rslt=rslt)
 
 
