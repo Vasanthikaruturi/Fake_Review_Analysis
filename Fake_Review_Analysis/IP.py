@@ -9,16 +9,8 @@ def IP_address(productid):
         res[i]=1
     
     ip_group=data.groupby("IP address")
-    print(ip_group)
-    print(type(ip_group))
-    """ip_list=data["IP address"].unique().tolist()
-    size=len(ip_list)
-    print(size)"""
     l=len(ip_add)
-    
-    def getsentiment(text):
-        return 0
-    
+  
     for i in range(l):
         reviews=ip_group.get_group(ip_add[i])
         
@@ -39,10 +31,7 @@ def IP_address(productid):
                     review_by_neg.append(review_each_day["review_id"][indices[k]])
                 else:
                     review_by_pos.append(review_each_day["review_id"][indices[k]])
-            """review_by_pos.append('R1MTOG8C9Z45BX')
-            review_by_pos.append('R1MTOG8C9Z45BX')
-            review_by_pos.append('R1MTOG8C9Z45BX')
-            review_by_pos.append('R1MTOG8C9Z45BX')"""
+       
             if(len(review_by_pos)>3):
                 for i in review_by_pos:
                     res[i]=0
